@@ -1,0 +1,44 @@
+//
+//  FriendDetail.swift
+//  FriendsFavoriteMovies
+//
+//  Created by Pranshu Bansal on 31/12/25.
+//
+
+import SwiftUI
+import SwiftData
+
+struct FriendDetail: View {
+    @Bindable var friend: Friend
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
+    
+    var body: some View {
+        Form{
+            TextField("Name", text: $friend.name)
+                .autocorrectionDisabled(true)
+        }
+        .navigationTitle("Friend")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    dismiss()
+                }
+                .foregroundStyle(Color(.systemBlue))
+            }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel"){
+                    context.delete(friend)
+                    dismiss()
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        FriendDetail(friend: SampleData.shared.friend)
+    }
+}
