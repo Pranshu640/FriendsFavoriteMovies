@@ -10,12 +10,19 @@ import SwiftData
 
 
 struct MovieList: View {
-    @Query(sort: \Movie.title) private var movies: [Movie]
+    @Query private var movies: [Movie]
     @Environment(\.modelContext) private var context
     @State private var newMovie: Movie?
     
+    
+    init(titleFilter: String = ""){
+        let predicate = #Predicate<Movie> { movie in
+            titleFilter.isEmpty || movie.title.localizedStandardContains(titleFilter)
+        }
+        _movies = Query(filter: predicate, sort: \Movie.title)
+    }
+    
     var body: some View {
-        NavigationSplitView{
             List {
                 ForEach(movies) { movie in
                     NavigationLink(movie.title){
@@ -37,11 +44,6 @@ struct MovieList: View {
                     MovieDetail(movie: movie, isNew: true)
                 }
             }.interactiveDismissDisabled(true)
-        }detail: {
-            Text("Select a Movie")
-                .navigationTitle("Movies")
-                .navigationBarTitleDisplayMode(.inline)
-        }
     }
     
     private func addMovie() {
@@ -58,6 +60,15 @@ struct MovieList: View {
 }
 
 #Preview {
-    MovieList()
-        .modelContainer(SampleData.shared.modelContainer)
+    NavigationStack{
+        MovieList()
+            .modelContainer(SampleData.shared.modelContainer)
+    }
+}
+
+#Preview("Filtered") {
+    NavigationStack{
+        MovieList(titleFilter: "am")
+            .modelContainer(SampleData.shared.modelContainer)
+    }
 }
