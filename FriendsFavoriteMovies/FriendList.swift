@@ -34,9 +34,9 @@ struct FriendList: View {
                 }
             }.sheet(item: $newFriend){ friend in
                 NavigationStack{
-                    FriendDetail(friend: friend)
+                    FriendDetail(friend: friend, isNew:true)
                 }
-            }
+            }.interactiveDismissDisabled(true)
         } detail: {
             Text("Select a friend")
                 .navigationTitle("Friend")
