@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D008595C2F0EB6F900474F00 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D008595B2F0EB6F100474F00 /* Readme.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D09E19E12F03B42A002A56B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,12 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D008595B2F0EB6F100474F00 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		D09E19D32F03B429002A56B9 /* FriendsFavoriteMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsFavoriteMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09E19E02F03B42A002A56B9 /* FriendsFavoriteMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsFavoriteMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09E19EA2F03B42A002A56B9 /* FriendsFavoriteMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsFavoriteMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D008595D2F0EB72500474F00 /* ScreenShots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
 		D09E19D52F03B429002A56B9 /* FriendsFavoriteMovies */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FriendsFavoriteMovies;
@@ -79,6 +89,8 @@
 				D09E19E32F03B42A002A56B9 /* FriendsFavoriteMoviesTests */,
 				D09E19ED2F03B42A002A56B9 /* FriendsFavoriteMoviesUITests */,
 				D09E19D42F03B429002A56B9 /* Products */,
+				D008595B2F0EB6F100474F00 /* Readme.md */,
+				D008595D2F0EB72500474F00 /* ScreenShots */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +120,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				D008595D2F0EB72500474F00 /* ScreenShots */,
 				D09E19D52F03B429002A56B9 /* FriendsFavoriteMovies */,
 			);
 			name = FriendsFavoriteMovies;
@@ -212,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D008595C2F0EB6F900474F00 /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
