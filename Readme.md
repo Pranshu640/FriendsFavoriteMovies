@@ -26,14 +26,12 @@ A minimal iOS app to track friends and their favorite movies. This README provid
 
 - Friends-List/Detail View:
   
-<img src="ScreenShots/FriendsList-View.png" alt="FriendsList Screenshot" width="200"/>
-<img src="ScreenShots/FriendsDetail-View.png" alt="FriendsDetail Screenshot" width="200"/>
+<img src="ScreenShots/FriendsList-View.png" alt="FriendsList Screenshot" width="200"/><img src="ScreenShots/FriendsDetail-View.png" alt="FriendsDetail Screenshot" width="200"/>
 
 
 
 - Detail View:
   
-<img src="ScreenShots/MovieList-View.png" alt="MovieList Screenshot" width="200"/>
-<img src="ScreenShots/MovieDetail-View.png" alt="MovieDetail Screenshot" width="200"/>
+<img src="ScreenShots/MovieList-View.png" alt="MovieList Screenshot" width="200"/><img src="ScreenShots/MovieDetail-View.png" alt="MovieDetail Screenshot" width="200"/>
 
 
